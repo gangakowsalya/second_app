@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Form</title>
+     <!-- <link rel="shortcut icon" href="m.jpg" type="image/x-icon"> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style type="text/css">
+          *{
+               margin:0px;
+               padding: 0px;
+               box-sizing: border-box;
+          }
+          :root{
+               --color:white;
+          }
+          .main{
+               width:1000px;
+               height:550px;
+               background: aliceblue;
+               border: 1px solid black;
+               margin: auto;
+               margin-top: 50px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               background-color: black;
+          }
+          .background_image{
+               width:1000px;
+               height:550px;
+               position: absolute;
+               opacity: 0.5;
+          }
+          .form{
+               width:340px;
+               height: 450px;
+               background-color: rgba(47,47,47,0.5);
+               position: relative;
+          }
+
+          .form .profile_image{
+               width:70px;
+               height:70px;
+               border-radius: 50%;
+               position: absolute;
+               top:-30px;
+               left:40%;
+
+          }
+          .form h2{
+               text-align: center;
+               margin-top:70px;
+               color:var(--color);
+          }
+          .email_div , .password_div{
+               width:100%;
+               height: 70px;
+               margin-top: 10px;
+
+          }
+ 
+
+          .form .label{
+              font-size: 15px;
+              padding:3px 20px;
+              color: var(--color);
+
+          }
+          .form .input{
+               width:300px;
+               height: 30px;
+               margin-top: 5px;
+               margin-left:20px;
+               border: none;
+               background-color: rgba(47,47,47,0.0);
+               border-bottom-style: solid;
+               border-bottom-color: whitesmoke;
+               border-bottom-width: 1px;
+          }
+          .submit_div{
+               width:100%;
+               height:50px;
+               display: flex;justify-content: center;align-items: center;
+          }
+          .submit_div #submit{
+               font-size: 15px;
+               padding: 5px 135px;
+          }
+          .or_content{
+               width:90%;
+               height:20px;
+               margin: auto;
+               margin-top: 20px;
+               position: relative;
+               /*
+               margin-top:20px;
+               position: relative;
+               left:18px; */
+          }
+          .or_content p{
+               position: absolute;
+               display: inline-block;
+               width:40px;
+               height:40px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               left:43%;
+               top:-10px;
+               background-color: rgba(47,47,47,0.2);
+               border-radius: 50%;
+               color:whitesmoke;
+               font-size: 13px;
+
+               /*position: absolute;
+               width:40px;
+               height:40px;
+               background-color:rgba(47,47,47,1);
+               top:-20px;
+               left:43%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               font-size: 12px;
+               border-radius: 50%;color: whitesmoke; */
+
+          }
+          .or_content p:before{
+               content: "";
+               display: block;
+               width:129px;
+               height:1px;
+               background-color:whitesmoke;
+               position: absolute;
+               top:20px;
+               left:-129px;
+          }
+          .or_content p:after{
+               content: "";
+               display: block;
+               width:131px;
+               height:1px;
+               background-color:whitesmoke;
+               position: absolute;
+               top:20px;
+               left:40px;
+          }
+          .button_div{
+               width:90%;
+               height:28px;
+               margin-left:15px;
+               margin-top: 10px;
+               display: flex;
+               justify-content:center;
+               align-items: center;
+
+
+          }
+          .facebook{
+               width: 150px;
+               height: 100%;
+               font-size: 10px;
+               font-weight: bold;
+               position: relative;
+               left:5px;
+               background-color: rgba(43,90,149,255);
+               padding-left:18px;
+               border: none;
+               border-radius: 5px;
+               color:whitesmoke;
+          }
+          .google{
+               width:150px;
+               height: 100%;
+               font-size: 10px;
+               font-weight: bold;
+               position: relative;
+               margin-left: 18px;
+               border: none;
+               background-color: red;
+               border-radius: 5px;
+               color:whitesmoke;
+          }
+
+          #icon1{
+               position: absolute;
+               font-size: 13px;
+               left:5px;
+               top:8px;
+
+
+          }
+          #icon2{
+               position: absolute;
+               font-size: 13px;
+               left:5px;
+               top:8px;
+
+          }
+          .signup{
+               width:100%;
+               padding:5px 10px;
+               margin-top: 10px;
+               text-align: center;
+               font-size: 13px;
+               font-weight: bold;
+               color:whitesmoke;
+          }
+          .signup a{
+               text-decoration: none;
+               margin-left: 10px;
+          }
+          input:focus{
+               outline:none;
+
+          }
+          input{
+               color:green;
+          }
+
+
+
+
+
+     </style>
+</head>
+<body>
+     <div class=  "main">
+          <img src="k.jpg" alt = "keybord" class = "background_image">
+               
+          <form class = "form" action="" method="POST" enctype="multipart/form-data">
+               <img src="profile.jpg" alt = "" class = "profile_image" >
+               <h2>LOGIN FORM</h2>
+               <div class = "email_div">
+               <label class = "label">Email</label><br>
+               <input type="Email" name="email" placeholder="Enter Email" class = "input">
+               </div>
+               <div class = "password_div">
+               <label class = "label">Password</label><br>
+               <input type="Password" name="password" placeholder="Enter Password" class = "input">
+               </div>
+               <div class= "submit_div">
+                    <input type="submit" name="submit" value = "login" id = "submit">
+               </div>
+
+               <div class = "or_content"><p>OR</p></div>
+               <div class = "button_div">
+                    <button class = "facebook"><i class="fa-brands fa-facebook" id = "icon1"></i>Sign in with Facebook</button>
+                    <button class = "google"><i class="fa-brands fa-google" id = "icon2"></i>Sign in with Google</button>
+               </div>
+               <div class = "signup"><p>Don't have account ?<a href="#">Signup now</a> </p></div>
+               
+          </form>
+          
+          
+          
+     </div>
+
+
+</body>
+</html>
